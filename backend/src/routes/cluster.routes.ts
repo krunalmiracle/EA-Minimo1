@@ -3,7 +3,7 @@ import clusterController from "../controllers/cluster.controller";
 
 const router = Router();
 router.get('/all', clusterController.getClusters);
-router.get('/:id', clusterController.getCluster);
+router.get('/get/:id', clusterController.getCluster);
 router.post('/new', clusterController.newCluster);
 router.post('/edit', clusterController.editCluster);
 export = router;

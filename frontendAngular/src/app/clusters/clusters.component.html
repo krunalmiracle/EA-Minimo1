@@ -1,0 +1,12 @@
+<div class="center">
+    <button (click)="addCluster()" class="button style=" >New Cluster</button>
+  </div>
+  
+  <div class="clusters">
+      <!-- SELECTOR DE COURSE-CARD.COMPONENT.TS -->
+      <app-cluster-card *ngFor="let cluster of clusters"
+        [cluster]="cluster">
+      </app-cluster-card>  
+      
+  </div>
+  

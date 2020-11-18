@@ -41,7 +41,7 @@ const editCluster = async (req: Request, res: Response) => {
         "reportDate" : req.body.reportDate
     });
     var query = {'_id': cluster.id};
-    delete cluster._id;
+    delete cluster._id; 
     //Non-null assertion operator ! or ?
     await Cluster.update(query, cluster, { multi: false }, function(err,result) {
         if(result.nModified ==1){
