@@ -1,27 +1,25 @@
 import mongoose, { Schema, Document} from 'mongoose';
-import Phone, {IPhone} from "./phone";
 
 //Modelo de objeto que se guarda en la BBDD de MongoDB
-const studentSchema = new Schema({
+const clusterSchema = new Schema({
     name: {
         type: String
     },
-    address: {
+    description: {
         type: String
     },
-    phones: [{
-        type: Object,
-        ref: Phone
-    }]
+    reportDate: {
+        type: Date
+    }
 });
 
 //Interfaz para tratar respuesta como documento
-export interface IStudent extends Document {
+export interface ICluster extends Document {
     name: string;
-    address: string;
-    phones: Array<IPhone>;
+    description: string;
+    reportDate:Date
 }
 
 //Exportamos modelo para poder usarlo 
 //Mongoose#model(name, [schema], [collection], [skipInit])
-export default mongoose.model<IStudent>('Student', studentSchema,'Students');
+export default mongoose.model<ICluster>('Cluster', clusterSchema,'Clusters');
