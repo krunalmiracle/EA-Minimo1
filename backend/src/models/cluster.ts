@@ -9,7 +9,7 @@ const clusterSchema = new Schema({
         type: String
     },
     reportDate: {
-        type: Date
+        type: String
     }
 });
 
@@ -17,7 +17,7 @@ const clusterSchema = new Schema({
 export interface ICluster extends Document {
     name: string;
     description: string;
-    reportDate:Date
+    reportDate:String
 }
 
 //Exportamos modelo para poder usarlo 

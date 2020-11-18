@@ -1,4 +1,4 @@
-import {Request, Response} from 'express';
+import e, {Request, Response} from 'express';
 import Cluster from '../models/cluster';
 
 const getClusters = async (req: Request, res: Response) => {
@@ -29,6 +29,7 @@ function newCluster (req: Request, res: Response): void {
     cluster.save().then((data) => {
         return res.status(201).json(data);
     }).catch((err) =>{
+        console.log(err);
         return res.status(500).json(err);
     })
 }

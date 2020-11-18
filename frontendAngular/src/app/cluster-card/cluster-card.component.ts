@@ -45,11 +45,5 @@ export class ClusterCardComponent implements OnInit {
       console.log(cluster);
     });
   
-}
-  editCluster(){
-    //edit the cluster
-    this.clusterService.editCluster(this.cluster).subscribe (clusters =>{
-      console.log(clusters);
-    })
   }
 }

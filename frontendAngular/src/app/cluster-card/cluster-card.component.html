@@ -1,3 +1,18 @@
+<style>
+  h3 {text-align: center;}
+  p {text-align: center;}
+  div {text-align: center;}
+  .submitBtn {
+  background-color: orange; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  </style>
 <div class="cluster-card" *ngIf="cluster">
 
     <form [formGroup]="clusterForm" class="login-container" (ngSubmit)="submitCluster()">
@@ -12,10 +27,8 @@
         
         <input type="text" placeholder="reportDate*" formControlName="reportDate" />
         <p>
-          <input type="submit" value="Submit" [disabled]="clusterForm.invalid" />
+          <input class="submitBtn" type="submit" value="Submit" [disabled]="clusterForm.invalid" />
         </p>
       </form>
-
-    <button (click)="editCluster()" class="button">Edit Cluster</button>
 </div>
 <br>
